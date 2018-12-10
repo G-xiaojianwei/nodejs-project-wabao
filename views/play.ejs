@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>游戏页面</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="/css/play.css">
+    <link rel="stylesheet" type="text/css" href="/css/upgo.css">
+	<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="/js/play.js"></script>
+    <script type="text/javascript" src="/js/upgo.js"></script>
+</head>
+<body>
+	<div id="play">
+		<div class="loading">
+
+				<div class="line">
+					<span>进度条</span>
+					<div class="line_a">
+						<div class="nei_line"></div>
+					</div>
+				</div>
+		</div>
+		 <script type="text/javascript"> 
+		  $('.nei_line').animate({'width':'33%'},50); //第一个进度节点 
+		</script> 
+		<div class="max">
+			<ul>
+				<% FieldNum.forEach((item)=>{ %>
+
+					<% if(item.isClick){ %>
+						<li class="yesplay" data-bid="<%= item._id %>"></li>
+					<% }else{ %>
+						<li class="noplay" data-bid="<%= item._id %>"></li>
+					<%	} %>
+
+
+			<% }) %>
+			</ul>
+		</div>
+		<div class="timeinfo"><span class="left">10s</span><span class="right">剩余：99次</span></div>
+		<div class="bar">
+				<!-- 进度条 -->
+					
+		</div>
+		<script type="text/javascript"> 
+		  $('.nei_line').animate({'width':'55%'},50); //第二个进度节点 
+		</script> 
+		<div class="startBtn">
+			<div class="img_a"><img src="/img/myapp_stop.png"></div>
+			<p><i></i>点击开始游戏 <i></i></p>
+			<div class="dd"><a href="/page/index">退出游戏</a><a href="/page/list">排行榜</a></div>
+		</div>
+		<%- include ./upgo.ejs %> 
+		<div class="model1">
+			<img src="/img/hao.png">
+			<div class="pinfo">
+				<h2>恭喜你</h2>
+				<p><span class="sp"></span>:<span class="pp"></span></p>
+			</div>
+			<div class="xxBtn">点击</div>
+			<div class="dd"><a href="/page/index">退出游戏</a><a href="/page/list">排行榜</a></div>
+		</div>
+		<script type="text/javascript"> 
+		  $('.nei_line').animate({'width':'80%'},50); //第三个进度节点 
+		</script> 
+		<img id="xcc" src="/img/xcc.png">
+		<audio   style="display: none;" id="audio">
+		  <source src="/mp3/lyq1762725.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+	</div>
+	<script type="text/javascript"> 
+	  $('.nei_line').animate({'width':'100%'},50); //第四个进度节点 
+	  var j=$("li.yesplay").length
+	  if(j===0){
+	  	$(".loading").fadeOut();
+	  }
+	</script>
+</body>
+</html>

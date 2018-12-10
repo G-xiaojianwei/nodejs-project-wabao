@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Document</title>
+	<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="/js/admin.js"></script>
+</head>
+<body>
+	<div id="admin">
+		<h2>cms界面</h2>
+		<div>
+			<p>田块数量：<%= FieldNum %></p>
+			<h3>添加田块</h3>
+			<input id="field" type="number" name="number">
+			<button class="btn1" type="submit">添加</button>
+			<h3>设置奖项</h3>
+			<input id="setPrize" type="text" name="setPrize">
+			<button class="btn3" type="submit">添加</button>
+			<h3>添加奖品</h3>
+			<select id="selectName">
+				<% setPrize.forEach((item)=>{ %>
+				<option  value="<%= item %>"><%= item %></option>
+
+				<% }) %>
+			</select>
+			<input id="prize" type="text" name="prize">
+			<button class="btn2" type="submit">添加</button>
+			<h3>删除奖品</h3>
+			<select id="deletePrize">
+				<% prize.forEach((item)=>{ %>
+				<option  value="<%= item.prize %>"><%= item.selectName %> <%= item.prize %></option>
+
+				<% }) %>
+			</select>
+			<button class="btn4" type="submit">删除</button>
+		</div>
+	</div>
+</body>
+</html>

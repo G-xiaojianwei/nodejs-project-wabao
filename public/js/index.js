@@ -1,0 +1,13 @@
+$(function(){
+	$(".grule").on("touchstart",function(){
+		$(".model").show();
+	})
+	$(".out").on("touchstart",function(){
+		$(".model").hide();
+	})
+	if($("#audio").autoplay){
+		console.log(1)
+	}else{
+		 audio.play();
+	}
+})

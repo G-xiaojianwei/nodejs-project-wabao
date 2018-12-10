@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/font/css/font-awesome.min.css">
+	<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src=/js/index.js></script>
+</head>
+<body>
+	<div id="index">
+		<div class="max">
+			<a href="/page/play">我要寻宝</a>
+			<a href="/page/freq">寻宝次数</a>
+			<a href="/page/record">中奖纪录</a>
+		</div>
+		<div class="info">
+			 
+			<span>
+			 <a href="/api/logOut">
+				<i class="fa fa-sign-out" aria-hidden="true"></i>
+			</a>
+			</span> 
+			<div style="display: inline-block;display: inline-block;color: rebeccapurple; margin-left: 0.7rem;font-weight: bold;">
+				<span>
+					<img src="/uploads/<%=user._id%>.jpg" width="20" height="20" style="border-radius: 50%">
+					<%= user.userName %>
+				</span>
+			</div>
+			<a href="/page/userInfo">
+				<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+			</a>
+		</div>
+		<span class="grule">游戏规则</span>
+		<div class="model">
+			<img src="/img/myapp_rule1.png">
+			<div><p>暂无....</p></div>
+			<i class="out">关闭</i>
+		</div>
+	</div>
+	<audio   style="display: none;" id="audio" loop>
+	  <source src="/mp3/nrt1208.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+</body>
+</html>

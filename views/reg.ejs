@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>注册</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/reg.css">
+	<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="/js/reg.js"></script>
+</head>
+<body>
+	<div id="reg">
+		<form action="/api/addUser" method="post" onsubmit="return addSub()">
+			<h2>用户注册</h2>
+			<div><span>用户昵称</span><input type="text" name="user" /></div>
+			<div><span>电话号码</span><input type="text" name="phone" /></div>
+			<div><span>用户密码</span><input type="password" name="pwd"></div>
+			<div><span>重复密码</span><input type="password" name="pwd2"></div>
+			<div><input type="submit" value="注册"></div>
+		</form>
+	</div>
+</body>
+</html>

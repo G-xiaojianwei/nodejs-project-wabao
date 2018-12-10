@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/font/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/userInfo.css">
+
+</head>
+<body>
+	<!-- 上传头像 -->
+	<div id="info">
+		<a href="/page/index"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+		<h2>个人中心</h2>
+		<form action="/api/upload" method="post" enctype="multipart/form-data">
+			<div>上传头像：<input id="file" type="file" name="file"><input type="submit" name="" value="上传"></div>
+		</form>
+	</div>
+</body>
+</html>

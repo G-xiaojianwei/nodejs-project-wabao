@@ -1,0 +1,20 @@
+
+<div class="box">
+    <div class="t_news">
+       
+        <b><img src="/img/5-120601152321-51.gif">最新播报</b>
+        <dl class="news_li">
+            
+           <% allArr.forEach((item)=>{ %>
+
+             <dt>恭喜<span style="font-weight: bold;margin:0 0.05rem; "><%= item.newName %></span>获得<span style="color: red"><%= item.newSetPrize %></span>：<%= item.newPrize %></dt>
+
+          <% }) %>
+        </dl>
+
+        <ul class="swap"></ul>
+
+    </div>
+</div>
+
+

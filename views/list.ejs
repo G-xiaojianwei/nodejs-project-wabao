@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/font/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/list.css">
+	<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+
+</head>
+<body>
+	<div id="list">
+		<a style="font-size: 0.3rem; margin:0 0.2rem;color: #666;position: absolute;;left: 0;top: 0;" href="javascript:history.go(-1)"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+		<ul>
+			<% best.forEach((item)=>{ %>
+				<li><%= item.aName %><%= item.aNum %></li>
+			<% }) %>
+		</ul>
+		
+	</div>
+</body>
+</html>

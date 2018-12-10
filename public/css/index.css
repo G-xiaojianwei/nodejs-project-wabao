@@ -1,0 +1,110 @@
+
+#index{
+	position: relative;
+	display:block;
+	width: 100%;
+	height:100%;
+	background:url(/img/myapp_index.jpg);
+	background-size: 100% 100%;
+}
+#index>.max{
+	position:absolute;
+	left:1.05rem;
+	top: 1.45rem;
+	width: 1.5rem;
+}
+#index>.max>a{
+	text-indent: -99999px;
+	display: block;
+	width:1.5rem;
+	font-size: 0.20rem;
+	padding: 10px 0;
+	margin: 0.15rem auto 0;
+	height:0.3rem; 
+	border-radius: 0.15rem;
+}
+#index>.max>a:first-child{
+	margin-top:0; 
+}
+#index>.max>a:active{
+	background:transparent;
+}
+#index:before{
+	content: "";
+	display: table;
+}
+.grule{
+	display: block;
+	margin: 3.7rem auto 0;
+	width:0.6rem;
+	text-indent:-999999px;
+	height: 0.45rem;
+	font-size: 0.05rem;
+	background: rgba(0,0,0,0.0);
+}
+#index>.model{
+	display: none;;
+	position:absolute;
+	left: 0;
+	top: 0;
+	background:rgba(0,0,0,.5);
+	width: 100%;
+	height: 100%; 
+}
+#index>.model>img{
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}
+.model>div {
+    position: absolute;
+    left: 0.68rem;
+    top: 1.8rem;
+    padding: 0 0.02rem;
+    width: 2.4rem;
+    height: 4rem;
+    font-size: 0.18rem;
+}
+.model>i {
+	text-indent: -999999px;
+    position: absolute;
+    right: 0.13rem;
+    top: 1.11rem;
+    display: block;
+    border-radius: 50%;
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.info{
+	margin-top:0.1rem; 
+	/*background: red;*/
+	font-size: 0.2rem;
+	padding:0 0.2rem;
+}
+.info:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.info>span{
+	margin-right: 0.1rem; 
+	float: left;
+}
+.info img{
+	vertical-align: middle;
+}
+.info a{
+	padding:0 0.08rem;
+	display:inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 0.05rem;
+}
+.info>a{
+	float: right;
+}
+.info i{
+	font-size: 0.3rem;
+	color: #f1f1f1;
+}
